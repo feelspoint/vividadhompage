@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>페이지 이동 중...</title>
+
+    <!-- 1. 자바스크립트를 이용한 즉시 리다이렉트 -->
+    <script>
+        // 현재 호스트(도메인)의 메인 주소로 이동합니다. (예: example.com/kr -> example.com)
+        window.location.href = window.location.origin;
+    </script>
+
+    <!-- 2. 자바스크립트가 차단된 브라우저를 위한 메타 태그 백업 (0초 뒤 이동) -->
+    <meta http-equiv="refresh" content="0; url=/">
+</head>
+<body>
+    <p>페이지를 이동 중입니다. 자동으로 이동하지 않으면 <a href="/">여기</a>를 클릭하세요.</p>
+</body>
+</html>
