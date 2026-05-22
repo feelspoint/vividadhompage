@@ -4,13 +4,66 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="ko">
 	<head>
 		<title>VIVIDAD</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- 탭 -->
+		<style>
+			/* 탭 버튼 스타일 */
+			.tab-container {
+				/* max-width: 600px; */
+				margin: 50px auto;
+				padding: 0 0.75em;
+				font-family: inherit;
+			}
+			.tab-buttons {
+				display: flex;
+				border-bottom: 2px solid #ddd;
+			}
+			.tab-btn {
+				padding: 12px 24px;
+				cursor: pointer;
+				background: none;
+				border: none;
+				font-size: 16px;
+				font-weight: bold;
+				color: #aaa;
+				outline: none;
+				transition: all 0.3s;
+			}
+			/* 활성화된 탭 스타일 */
+			.tab-btn.active {
+				color: #888;
+				border-bottom: 3px solid #aaa;
+				margin-bottom: -2px;
+			}
+
+			/* 탭 콘텐츠 스타일 */
+			.tab-content {
+				display: none; /* 기본적으로 숨김 */
+				padding: 20px 10px;
+				line-height: 1.6;
+				color: #444;
+			}
+			.tab-content.copyright,
+			.tab-content.copyright p,
+			.tab-content.copyright li {
+				font-family: "Roboto", Helvetica, sans-serif;
+				font-size: 0.8em;
+				color: #aaa;
+			}
+			/* 활성화된 콘텐츠 보여주기 */
+			.tab-content.active {
+				display: block;
+			}
+		</style>
+		<!-- 탭 -->>
+
 	</head>
 	<body class="is-preload-0 is-preload-1 is-preload-2">
 
@@ -20,7 +73,7 @@
 				<!-- Header -->
 					<header id="header">
 						<!--h1>VIVIDAD</h1-->
-						<img width="100%" src="images/vividad_CI_r.png" alt="" />
+						<img width="100%" src="images/vividad_CI_r.png" alt="VIVIDAD" />
 						<p>OUR EXPERIENCE YOUR SUCCESS</p>
 						<p>Marketing, AD-Tech, Investment</p>
 <!--
@@ -37,7 +90,7 @@
 				<!-- Thumbnail -->
 					<section id="thumbnails">
 						<article>
-							<a class="thumbnail" href="images/fulls/01.jpg" data-position="left center"><img src="images/thumbs/01.jpg" alt="" /></a>
+							<a class="thumbnail" href="images/fulls/01.jpg"><img src="images/thumbs/01.jpg" alt="" /></a>
 							<h2>Silver Grass</h2>
 							<p>Sangumburi Crater, Jeju</p>
 						</article>
@@ -47,7 +100,7 @@
 							<p>Jeju International Airport</p>
 						</article>
 						<article>
-							<a class="thumbnail" href="images/fulls/03.jpg" data-position="top center"><img src="images/thumbs/03.jpg" alt="" /></a>
+							<a class="thumbnail" href="images/fulls/03.jpg"><img src="images/thumbs/03.jpg" alt="" /></a>
 							<h2>Eaves and Dancheong of Korean Traditional Architecture</h2>
 							<p>Gwandeokjeong Hall, Jeju</p>
 						</article>
@@ -57,7 +110,7 @@
 							<p>Hwaseong Haenggung Palace, Suwon</p>
 						</article>
 						<article>
-							<a class="thumbnail" href="images/fulls/05.jpg" data-position="top center"><img src="images/thumbs/05.jpg" alt="" /></a>
+							<a class="thumbnail" href="images/fulls/05.jpg"><img src="images/thumbs/05.jpg" alt="" /></a>
 							<h2>Peach Blossom</h2>
 							<p>Namwon-eup, Jeju</p>
 						</article>
@@ -98,25 +151,102 @@
 						</article>
 					</section>
 
-				<!-- Footer -->
+<!-- 탭 -->
+<div class="tab-container">
+    <!-- 탭 버튼 영역 -->
+    <div class="tab-buttons">
+        <button class="tab-btn active" onclick="openTab(event, 'tab1')">LOCATION</button>
+        <button class="tab-btn" onclick="openTab(event, 'tab2')">WHO WE ARE</button>
+        <button class="tab-btn" onclick="openTab(event, 'tab3')">WHAT WE DO</button>
+    </div>
+
+    <!-- 탭 콘텐츠 영역 (여기에 SEO용 키워드와 내용을 풍부하게 작성하세요) -->
+	<div id="tab1" class="tab-content active copyright">
+		<!-- <h3></h3> -->
+		<li>
+<br>Contact Email : vividad@vividad.net
+<br>
+<br>Seoul Office : 2F-37, 12, Digital-ro 31-gil, Guro-gu, Seoul, Republic of Korea
+<br>Jeju Office : 2F, 82, Gwideok-ro, Hallim-eup, Jeju-si, Jeju-do, Republic of Korea
+        </li>
+    </div>
+
+	<div id="tab2" class="tab-content copyright">
+        <!-- <h3></h3> -->
+        <p>
+<br>PAVE YOUR PATH THROUGH THE MODERN DIGITAL MARKET
+<br>
+<br>With sophisticated technology and deep understanding of digital marketing, VIVIDAD offers insight into the rapid and ever changing digital world, leading to only the best optimal paths for your success.
+<br>디지털 마케팅에 대한 깊은 이해와 정교한 기술력을 바탕으로, 비비다드는 급변하는 디지털 세상에서 최대의 성과를 달성하기 위한 최적의 경로만을 제시합니다.
+<br>
+<br>As your partner, VIVIDAD employs expertise from various advertisement fields according to your brand's needs to bring you whole and encompassing digital performance marketing services.
+<br>Rather than making dramatic gestures, VIVIDAD focuses on providing partners with reliable service based on our seasoned experts' vivid experiences.
+<br>비비다드는 브랜드의 요구사항에 맞춰 광고 분야별 전문가들이 생생한 경험을 토대로 캠페인의 성공을 위한 디지털 퍼포먼스 마케팅의 전반적인 서비스를 제공합니다.
+<br>
+<br>Media & Campaign Agency
+<br>캠페인 및 미디어 대행
+<br>App UA Marketing
+<br>앱 이용자확보 마케팅
+<br>Strategy Investment
+<br>전략적 사업 투자
+<br>
+<br>VIVIDAD is a company that is strong in marketing to maximize efficiency.
+<br>효율 극대화를 위한 깊이 있고 다양한 마케팅에 강한 회사 VIVIDAD 입니다.
+<br>Banner AD App Marketing Search AD Smart Store SEO Varal Marketing OOH
+<br>배너광고, 앱이용자확보마케팅, 검색광고, 스마트스토어검색최적화, 바이럴마케팅, 옥외광고
+        </p>
+    </div>
+
+	<div id="tab3" class="tab-content copyright">
+        <!-- <h3></h3> -->
+        <p>
+<br>STRATEGIC PLANNING
+<br>We set KPIs and propose campaign plans designed with insight borne from experience.
+<br>비비다드는 경험에 기반한 인사이트를 활용하여 KPI 목표를 설정하고 캠페인을 기획 및 제안합니다.
+<br>
+<br>CAMPAIGN MANAGEMENT
+<br>Our experience is diverse and highly adaptable.
+<br>We ensure a successful campaign molded to your preferences and goals.
+<br>비비다드는 업무별 풍부한 경험을 보유하여 맞춤형 업무 프로세스를 구축하고 안정적으로 캠페인을 운영합니다.
+<br>
+<br>TECHNOLOGY
+<br>We offer a variety of sophisticated solutions on top of access to our very own AdTech based, independent platform,
+<br>비비다드는 다양한 마케팅 솔루션 활용이 가능하며, 애드테크 기반의 자체적인 플랫폼을 개발하여 운영하고 있습니다.
+        </p>
+    </div>
+</div>
+
+<script>
+function openTab(evt, tabId) {
+    // 1. 모든 탭 콘텐츠 숨기기
+    const tabContents = document.getElementsByClassName("tab-content");
+    for (let i = 0; i < tabContents.length; i++) {
+        tabContents[i].classList.remove("active");
+    }
+
+    // 2. 모든 탭 버튼의 활성화(active) 클래스 제거
+    const tabButtons = document.getElementsByClassName("tab-btn");
+    for (let i = 0; i < tabButtons.length; i++) {
+        tabButtons[i].classList.remove("active");
+    }
+
+    // 3. 클릭한 탭 콘텐츠와 버튼만 활성화하기
+    document.getElementById(tabId).classList.add("active");
+    evt.currentTarget.classList.add("active");
+}
+</script>
+<!-- 탭 -->
+
 					<footer id="footer">
 						<ul class="copyright">
-							<li>
-								Contact Email : vividad@vividad.net <br>
-								<br>
-								Seoul Office : 2F-37, 12, Digital-ro 31-gil, Guro-gu, Seoul, Republic of Korea<br>
-								Jeju Office : 2F, 82, Gwideok-ro, Hallim-eup, Jeju-si, Jeju-do, Republic of Korea<br>
-								<br>
-								<br>
-							</li>
 							<li>&copy; 2026 by VIVIDAD Co., Ltd.</li>
 						</ul>
 					</footer>
-				
-				<!-- Coupang Banner -->
-				<center>
-				<iframe src="https://ads-partners.coupang.com/widgets.html?id=581548&template=carousel&trackingCode=AF2928715&subId=ADSafariDSP&width=400&height=400&tsource=" width="300" height="300" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
-				</center>
+
+					<!-- Coupang Banner -->
+					<center>
+					<iframe src="https://ads-partners.coupang.com/widgets.html?id=581548&template=carousel&trackingCode=AF2928715&subId=ADSafariDSP&width=400&height=400&tsource=" width="300" height="300" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+					</center>
 
 			</div>
 
