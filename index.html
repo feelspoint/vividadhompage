@@ -9,7 +9,7 @@
 		<title>VIVIDAD : 비비다드 공식 홈페이지</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="비비다드 디지털마케팅 마케팅 광고대행 이용자확보 퍼포먼스 매체 최적화 KIP 달성">
+		<meta name="description" content="비비다드 디지털마케팅 마케팅 광고대행 이용자확보 퍼포먼스 매체 최적화 KPI 달성">
 		<meta name="keywords" content="비비다드, VIVIDAD, 마케팅, 광고대행, Media & Campaign Agency, 캠페인 대행, 미디어 대행, App UA Marketing, UAC, 앱 이용자확보 마케팅, Strategy Investment, 전략적 사업 투자">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -26,24 +26,28 @@
 			}
 			.tab-buttons {
 				display: flex;
+				flex-wrap: nowrap;
 				border-bottom: 2px solid #ddd;
 			}
 			.tab-btn {
 				flex: 1 1 0;
 				min-width: 0;
-				padding: 12px 16px;
+				padding: 12px 6px;
 				cursor: pointer;
 				background: none;
 				border: none;
-				font-size: 16px;
+				font-size: 14px;
 				font-weight: bold;
 				color: #aaa;
-				outline: none;
 				transition: all 0.3s;
 				text-align: center;
-				white-space: normal;
-				word-break: keep-all;
-				overflow-wrap: anywhere;
+				white-space: nowrap;
+				word-break: normal;
+				overflow-wrap: normal;
+			}
+			.tab-btn:focus-visible {
+				outline: 2px solid #444;
+				outline-offset: 2px;
 			}
 			/* 활성화된 탭 스타일 */
 			.tab-btn.active {
@@ -77,22 +81,19 @@
 					padding: 0 0.5em;
 				}
 				.tab-btn {
-					padding: 10px 8px;
-					font-size: 14px;
+					padding: 10px 4px;
+					font-size: 13px;
 				}
 			}
 
 			@media (max-width: 420px) {
-				.tab-buttons {
-					flex-wrap: wrap;
-				}
 				.tab-btn {
-					flex: 1 1 33.333%;
-					font-size: 13px;
+					padding: 10px 2px;
+					font-size: 12px;
 				}
 			}
 		</style>
-		<!-- 탭 -->>
+		<!-- 탭 -->
 
 	</head>
 	<body class="is-preload-0 is-preload-1 is-preload-2">
@@ -102,10 +103,14 @@
 
 				<!-- Header -->
 					<header id="header">
-						<!--h1>VIVIDAD</h1-->
-						<img width="100%" src="images/vividad_CI_r.png" alt="VIVIDAD" />
-						<p>OUR EXPERIENCE YOUR SUCCESS</p>
-						<p>Marketing, AD-Tech, Investment</p>
+						<img class="brand-logo" src="images/vividad_CI_r.png" alt="VIVIDAD" />
+						<p class="brand-tagline" lang="en">OUR EXPERIENCE YOUR SUCCESS</p>
+						<div class="brand-intro">
+							<h1>비비다드 - 디지털 퍼포먼스 마케팅 파트너</h1>
+							<p class="intro-ko">캠페인 전략부터 앱 이용자 확보, 매체 운영까지 브랜드의 목표에 맞춘 디지털 마케팅 서비스를 제공합니다.</p>
+							<p class="intro-en" lang="en">Your digital performance marketing partner.<br />From campaign strategy and app user acquisition to media management, we provide digital marketing services tailored to your brand’s goals.</p>
+						</div>
+						<p class="brand-services" lang="en">Marketing, AD-Tech, Investment</p>
 <!--
 						<p>Just another fine responsive site template by <a href="http://html5up.net">HTML5 UP</a></p>
 						<ul class="icons">
@@ -193,12 +198,12 @@
     <!-- 탭 콘텐츠 영역 (여기에 SEO용 키워드와 내용을 풍부하게 작성하세요) -->
 	<div id="tab1" class="tab-content active copyright">
 		<!-- <h3></h3> -->
-		<li>
+		<p>
 <br>Contact Email : vividad@vividad.net
 <br>
 <br>Seoul Office : 2F-37, 12, Digital-ro 31-gil, Guro-gu, Seoul, Republic of Korea
 <br>Jeju Office : 2F, 82, Gwideok-ro, Hallim-eup, Jeju-si, Jeju-do, Republic of Korea
-        </li>
+        </p>
     </div>
 
 	<div id="tab2" class="tab-content copyright">
@@ -222,7 +227,7 @@
 <br>
 <br>VIVIDAD is a company that is strong in marketing to maximize efficiency.
 <br>효율 극대화를 위한 깊이 있고 다양한 마케팅에 강한 회사 VIVIDAD 입니다.
-<br>Banner AD App Marketing Search AD Smart Store SEO Varal Marketing OOH
+<br>Banner AD App Marketing Search AD Smart Store SEO Viral Marketing OOH
 <br>배너광고, 앱이용자확보마케팅, 검색광고, 스마트스토어검색최적화, 바이럴마케팅, 옥외광고
         </p>
     </div>

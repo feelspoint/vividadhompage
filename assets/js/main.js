@@ -289,7 +289,7 @@ var main = (function($) { var _ = {
 
 						// Calculate stuff.
 							var	diffX = _.$main.touchPosX - event.originalEvent.touches[0].pageX,
-								diffY = _.$main.touchPosY - event.originalEvent.touches[0].pageY;
+								diffY = _.$main.touchPosY - event.originalEvent.touches[0].pageY,
 								boundary = 20,
 								delta = 50,
 								result = false;
@@ -348,7 +348,7 @@ var main = (function($) { var _ = {
 		// Keyboard shortcuts.
 
 			// Ignore shortcuts within form elements.
-				_.$body.on('keydown', 'input,select,textarea', function(event) {
+				_.$body.on('keydown', 'input,select,textarea,button', function(event) {
 					event.stopPropagation();
 				});
 
@@ -484,13 +484,24 @@ var main = (function($) { var _ = {
 			_.initViewer();
 			_.initEvents();
 
-		// Show first slide if xsmall isn't active.
+		// Show a random initial slide if xsmall isn't active.
 			breakpoints.on('>xsmall', function() {
 
-				if (_.current === null)
-					_.switchTo(0, true);
+				if (_.current === null && _.slides.length > 0) {
+					_.switchTo(Math.floor(Math.random() * _.slides.length), true, true);
+					_.$main.scrollTop(0);
+				}
 
 			});
+
+		// Advance in order without moving focus or hiding the main panel.
+			window.setInterval(function() {
+				if (document.hidden || _.locked || _.current === null || _.slides.length < 2
+				|| (breakpoints.active('<=xsmall') && !_.$body.hasClass('fullscreen')))
+					return;
+
+				_.switchTo((_.current + 1) % _.slides.length, true, true);
+			}, 7000);
 
 	},
 
@@ -498,7 +509,7 @@ var main = (function($) { var _ = {
 	 * Switch to a specific slide.
 	 * @param {integer} index Index.
 	 */
-	switchTo: function(index, noHide) {
+	switchTo: function(index, noHide, preserveFocus) {
 
 		// Already at index and xsmall isn't active? Bail.
 			if (_.current == index
@@ -539,9 +550,10 @@ var main = (function($) { var _ = {
 		// Activate new slide.
 
 			// Thumbnail.
-				newSlide.$parent
-					.addClass('active')
-					.focus();
+				newSlide.$parent.addClass('active');
+
+				if (!preserveFocus)
+					newSlide.$parent.focus();
 
 			// Slide.
 				var f = function() {
@@ -562,7 +574,10 @@ var main = (function($) { var _ = {
 									newSlide.$slide.addClass('loading');
 
 								// Wait for it to load.
-									$('<img src="' + newSlide.url + '" />').on('load', function() {
+									$('<img />').on('error', function() {
+										newSlide.$slide.removeClass('loading').addClass('active');
+										_.locked = false;
+									}).on('load', function() {
 									//window.setTimeout(function() {
 
 										// Set background image.
@@ -582,7 +597,7 @@ var main = (function($) { var _ = {
 											}, 100);
 
 									//}, 1000);
-									});
+									}).attr('src', newSlide.url);
 
 							}, 100);
 
