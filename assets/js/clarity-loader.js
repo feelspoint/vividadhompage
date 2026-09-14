@@ -1,11 +1,11 @@
-// Keep the Google Analytics configuration in its separate HTML file.
+// Keep the Microsoft Clarity configuration in its separate HTML file.
 (function() {
-	var tagUrl = new URL('../../tag_google_analytics_20260914.html', document.currentScript.src);
+	var tagUrl = new URL('../../tag_microsoft_clarity_20260914.html', document.currentScript.src);
 
 	fetch(tagUrl, { cache: 'no-store' })
 		.then(function(response) {
 			if (!response.ok)
-				throw new Error('Analytics tag request failed: ' + response.status);
+				throw new Error('Clarity tag request failed: ' + response.status);
 
 			return response.text();
 		})
@@ -26,6 +26,6 @@
 			});
 		})
 		.catch(function(error) {
-			console.warn('Google Analytics could not be loaded.', error);
+			console.warn('Microsoft Clarity could not be loaded.', error);
 		});
 })();
