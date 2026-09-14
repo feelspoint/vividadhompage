@@ -178,21 +178,6 @@ var main = (function($) { var _ = {
 
 		// Window.
 
-			// Remove is-preload-* classes on load.
-				_.$window.on('load', function() {
-
-					_.$body.removeClass('is-preload-0');
-
-					window.setTimeout(function() {
-						_.$body.removeClass('is-preload-1');
-					}, 100);
-
-					window.setTimeout(function() {
-						_.$body.removeClass('is-preload-2');
-					}, 100 + Math.max(_.settings.layoutDuration - 150, 0));
-
-				});
-
 			// Disable animations/transitions on resize.
 				var resizeTimeout;
 
@@ -483,6 +468,14 @@ var main = (function($) { var _ = {
 			_.initProperties();
 			_.initViewer();
 			_.initEvents();
+
+		// Reveal the initialized page without waiting for images, ads or analytics.
+			_.$body.removeClass('is-preload-1 is-preload-2');
+			window.requestAnimationFrame(function() {
+				window.requestAnimationFrame(function() {
+					_.$body.removeClass('is-preload-0');
+				});
+			});
 
 		// Show a random initial slide if xsmall isn't active.
 			breakpoints.on('>xsmall', function() {
