@@ -990,6 +990,71 @@ input, select, textarea {
 		padding: 2.25em 2.25em 1em 2.25em ;
 	}
 
+		#footer .partnership-inquiry {
+			margin: 0 auto 2.25em;
+			padding: 1.5em 1.75em 1.25em;
+			max-width: 38em;
+			font-size: 0.8em;
+			border: solid 1px #ccc;
+			border-radius: 4px;
+		}
+
+			#footer .partnership-inquiry h2 {
+				font-size: 1em;
+				margin-bottom: 1.5em;
+				text-align: center;
+			}
+
+			#footer .partnership-inquiry label,
+			#footer .partnership-inquiry input[type="text"],
+			#footer .partnership-inquiry input[type="email"],
+			#footer .partnership-inquiry textarea,
+			#footer .partnership-inquiry button {
+				font-size: 1em;
+			}
+
+			#footer .partnership-inquiry label {
+				margin-bottom: 0.4em;
+				white-space: nowrap;
+			}
+
+			#footer .partnership-inquiry input[type="text"],
+			#footer .partnership-inquiry input[type="email"] {
+				height: 2.5em;
+			}
+
+			#footer .partnership-inquiry textarea {
+				min-height: 7.5em;
+				resize: vertical;
+			}
+
+			#footer .partnership-inquiry .inquiry-fields {
+				display: block;
+			}
+
+			#footer .partnership-inquiry .field {
+				margin-bottom: 1.25em;
+			}
+
+			#footer .partnership-inquiry .actions {
+				justify-content: center;
+				margin-bottom: 0;
+			}
+
+			#footer .partnership-inquiry .actions .button {
+				padding: 0.65em 1.4em;
+			}
+
+	@media screen and (max-width: 640px) {
+		#footer .partnership-inquiry {
+			padding: 1.25em 1em 1em;
+		}
+
+		#footer .partnership-inquiry .inquiry-fields {
+			display: block;
+		}
+	}
+
 		#footer .copyright {
 			list-style: none;
 			padding: 0;

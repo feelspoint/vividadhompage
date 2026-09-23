@@ -280,6 +280,33 @@ function openTab(evt, tabId) {
 <!-- 탭 -->
 
 					<footer id="footer">
+						<section class="partnership-inquiry" aria-labelledby="partnership-inquiry-title">
+							<h2 id="partnership-inquiry-title">제휴문의 (Partnership Inquiry)</h2>
+							<form action="https://formspree.io/f/mvkgrpbe" method="post">
+								<div class="inquiry-fields">
+									<div class="field">
+										<label for="inquiry-company">회사명 (Company Name)</label>
+										<input type="text" id="inquiry-company" name="회사명" required />
+									</div>
+									<div class="field">
+										<label for="inquiry-contact">담당자명 (Contact Person)
+										</label>
+										<input type="text" id="inquiry-contact" name="담당자명" required />
+									</div>
+									<div class="field">
+										<label for="inquiry-email">이메일 (Email)</label>
+										<input type="email" id="inquiry-email" name="이메일" required />
+									</div>
+								</div>
+								<div class="field">
+									<label for="inquiry-message">문의내용 (Inquiry Message)</label>
+									<textarea id="inquiry-message" name="문의내용" rows="5" required></textarea>
+								</div>
+								<ul class="actions">
+									<li><button type="submit" class="button">문의 보내기 (Submit Inquiry)</button></li>
+								</ul>
+							</form>
+						</section>
 						<ul class="copyright">
 							<li>&copy; 2026 by VIVIDAD Co., Ltd.</li>
 						</ul>
