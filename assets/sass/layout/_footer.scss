@@ -11,15 +11,17 @@
 
 		.partnership-inquiry {
 			margin: 0 auto 2.25em;
-			padding: 1.5em 1.75em 1.25em;
+			padding: 1.15em 1.35em 1em;
 			max-width: 38em;
-			font-size: 0.8em;
+			font-size: 0.75em;
+			color: _palette(fg);
 			border: solid 1px _palette(border);
 			border-radius: _size(border-radius);
 
 			h2 {
-				font-size: 1em;
-				margin-bottom: 1.5em;
+				color: _palette(fg-bold);
+				font-size: 0.95em;
+				margin-bottom: 1.2em;
 				text-align: center;
 			}
 
@@ -28,21 +30,23 @@
 			input[type="email"],
 			textarea,
 			button {
-				font-size: 1em;
+				font-size: 0.9em;
+				color: _palette(fg-bold);
 			}
 
 			label {
+				color: _palette(fg-bold);
 				margin-bottom: 0.4em;
 				white-space: nowrap;
 			}
 
 			input[type="text"],
 			input[type="email"] {
-				height: 2.5em;
+				height: 2.15em;
 			}
 
 			textarea {
-				min-height: 7.5em;
+				min-height: 6em;
 				resize: vertical;
 			}
 
@@ -51,7 +55,7 @@
 			}
 
 			.field {
-				margin-bottom: 1.25em;
+				margin-bottom: 0.9em;
 			}
 
 			.actions {
@@ -60,7 +64,7 @@
 			}
 
 			.actions .button {
-				padding: 0.65em 1.4em;
+				padding: 0.55em 1.15em;
 			}
 		}
 
