@@ -1,2 +1,2 @@
 # vividadhompage.github.io
-vividad homepage 20260520
+vividad homepage
