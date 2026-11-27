@@ -407,10 +407,11 @@ var main = (function($) { var _ = {
 					// Slide.
 
 						// Create elements.
-	 						s.$slide = $('<div class="slide"><div class="caption"></div><div class="image"></div></div>');
+	 						s.$slide = $('<div class="slide"><div class="caption"></div><div class="backdrop"></div><div class="image"></div></div>');
 
 	 					// Image.
  							s.$slideImage = s.$slide.children('.image');
+ 							s.$slideBackdrop = s.$slide.children('.backdrop');
 
  							// Set background stuff.
 	 							s.$slideImage
@@ -432,6 +433,8 @@ var main = (function($) { var _ = {
 
 							// Set slide's background image to it.
 								s.$slideImage
+									.css('background-image', 'url(' + s.url + ')');
+								s.$slideBackdrop
 									.css('background-image', 'url(' + s.url + ')');
 
 							// Mark slide as loaded.
@@ -575,6 +578,8 @@ var main = (function($) { var _ = {
 
 										// Set background image.
 											newSlide.$slideImage
+												.css('background-image', 'url(' + newSlide.url + ')');
+											newSlide.$slideBackdrop
 												.css('background-image', 'url(' + newSlide.url + ')');
 
 										// Mark as loaded.
